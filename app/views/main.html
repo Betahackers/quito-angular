@@ -1,36 +1,36 @@
 <div class="header">
   <ul class="nav nav-pills pull-right">
     <li class="active"><a ng-href="#">Home</a></li>
-    <li><a ng-href="#">About</a></li>
-    <li><a ng-href="#">Contact</a></li>
+    <li><a ng-href="#">About people who created this</a></li>
   </ul>
-  <h3 class="text-muted">quito angular</h3>
+  <h3 class="text-muted">Beta guide</h3>
 </div>
 
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!</a></p>
+<div class="row-fluid">
+<div class="google-map span7"
+     center="map.center"
+     zoom="map.zoom"
+     draggable="true"
+     dragging="map.dragging"
+     bounds="map.bounds"
+     events="map.events"
+     options="map.options"
+     pan="true"
+     control="map.control"
+        >
+
+
+    <markers models="map.markers" coords="'self'" icon="'icon'" click="'onClicked'"
+             labelContent="'title'" labelAnchor="22 0" labelClass="marker-labels">
+        <windows show="'showWindow'" closeClick="'closeClick'" ng-cloak>
+            <p ng-non-bindable>This is an info window at {{ latitude | number:4 }}, {{ longitude | number:4 }}!</p>
+
+            <p class="muted">Here goes some description of location</p>
+        </windows>
+    </markers>
+
 </div>
-
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
-
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
-
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
 </div>
 
 <div class="footer">
-  <p>♥ from the Yeoman team</p>
 </div>
